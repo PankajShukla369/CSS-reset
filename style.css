@@ -10,17 +10,21 @@ html {
     font-size: 62.5%;
 }
 
+/* We want to set margin, padding to zero for all the elements below*/
 * {
     margin: 0;
     padding: 0;
 }
 
+/* We want to set box-sizing for all the elements including pseudo elements below*/
 *,
 *::after,
 *::before {
     box-sizing: inherit;
 }
 
+/* While font-size is set at the root element i.e. html so that we could use rem, it is the body which has the content, hence font-family should be on the body
+Alternatively it can be on the html element as well but body seems more logical*/
 body {
     font-family: 'Roboto', sans-serif;
 }
