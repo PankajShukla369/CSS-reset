@@ -1,0 +1,49 @@
+/* We want to use rem which means root em. Hence the font-size should be defined on the root element.
+For an HTML document root element is the html element, hence font-size:62.5% is defined on the html element.
+
+Additionally, we want box-sizing to be defined on the root element i.e. html element so that it could be inherited by the all the elements 
+and all the before and all the after pseudo elements.
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    margin: 1rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+p::before {
+    content: '“';
+    left: 0;
+}
+
+p::before, p::after {
+    color: red;
+    font-size: 5rem;
+    position: absolute;
+    top: 2px;
+}
+    
+p::after {
+    content: '”';
+}
